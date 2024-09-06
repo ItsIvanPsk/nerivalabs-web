@@ -1,0 +1,246 @@
+/* Layout principal */
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 45vh;
+}
+
+.main-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+main {
+  width: 100%;
+}
+
+.hero {
+  flex-grow: 1;
+}
+
+/* Secciones generales */
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1.5em;
+}
+
+.project-article,
+.team-article,
+.event-article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Proyectos */
+.project-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%; /* Ajustado a 100% para responsividad */
+  justify-content: space-around; /* Para centrar los proyectos en filas */
+}
+
+.project-container > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; /* En pantallas pequeñas, ocupar todo el ancho */
+  margin: 1em 0; /* Reducir márgenes en pantallas pequeñas */
+}
+
+.project-container > div > img {
+  height: auto;
+  width: 100%;
+  max-width: 100%; /* Evitar que las imágenes se salgan de su contenedor */
+}
+
+.project-container-title {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.project-container-subtitle {
+  margin-top: -0.75em;
+}
+
+.project-article > h3 {
+  font-size: 1.75em;
+  margin-top: 2em;
+}
+
+.project-article > div > a {
+  display: flex;
+  margin-top: 0.2em;
+}
+
+/* Equipo */
+.team-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.team-container {
+  margin: 2rem 0;
+  justify-content: space-around;
+  align-items: stretch;
+}
+
+.team-container > div {
+  text-align: center;
+  margin: 1rem;
+  background-color: lightgray;
+  border-radius: 10px;
+  padding: 20px;
+  flex-basis: 100%; /* Ocupa todo el ancho disponible en móviles */
+}
+
+.team-container img {
+  width: 150px; /* Tamaño de imagen más grande por defecto */
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #333;
+  margin-bottom: 1rem;
+}
+
+.team-article > h3 {
+  font-size: 1.75em;
+}
+
+.team-container > h3 {
+  font-size: 1.75em;
+  margin: 0.5rem 0;
+}
+
+.team-container p {
+  font-size: 14px;
+  margin: 0.5rem 0;
+}
+
+.team-article {
+  margin-top: 4em;
+}
+
+.team-article > p {
+  width: 65%;
+}
+
+/* Eventos */
+.event-section,
+.event-article {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.event-article > div > p {
+  width: 90%;
+}
+
+.event-article > div > h3 {
+  font-size: 1.75em;
+}
+
+.event-article > div:first-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.event-gallery {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.event-gallery > a {
+  width: 35%;
+  align-items: center;
+  margin: 0 1.5em;
+}
+
+.event-gallery > a > img {
+  width: 100%;
+  max-width: 400px; 
+  max-height: 400px;
+  height: 18em;
+  padding: 0.5em;
+}
+
+/* Media Queries */
+@media screen and (min-width: 768px) {
+  /* Proyectos */
+  .project-container > div {
+    width: 48%; /* Ocupa aproximadamente la mitad del contenedor en pantallas medianas */
+    margin: 1em;
+  }
+
+  /* Equipo */
+  .team-container {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .team-container > div {
+    flex-basis: 22%; /* Mantén el ancho constante entre miembros del equipo */
+    margin: 1rem;
+  }
+
+  .team-container img {
+    width: 180px; /* Ajuste de tamaño de imagen para pantallas más grandes */
+    height: 180px;
+  }
+
+  .team-container h3 {
+    font-size: 1.25em;
+  }
+
+  .team-container p {
+    font-size: 16px;
+  }
+
+  /* Eventos */
+  .event-gallery {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  /* Proyectos */
+  .project-container > div {
+    width: 45%; /* Ajusta para pantallas más grandes */
+  }
+
+  .project-container > div > img {
+    height: 25em; /* Mantener la altura fija si lo deseas en pantallas grandes */
+    width: auto; /* Ajustar el ancho automáticamente */
+  }
+
+  /* Equipo */
+  .team-container > div {
+    flex-basis: 22%; /* Ancho consistente en pantallas grandes */
+  }
+
+  .team-container img {
+    width: 200px;
+    height: 200px;
+  }
+}

@@ -1,0 +1,25 @@
+.hero {
+  padding: 5rem 2rem;
+  text-align: center;
+  background-image: url('https://img.pikbest.com/backgrounds/20190909/original-blue-business-technology-fluid-banner-background_2761716.jpg!w700wp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #f4f4f4;
+  width: 100%;
+}
+  
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.hero p {
+  font-size: 1rem;
+  color: #f4f4f4;
+  margin-top: -1em;
+}
+section {
+  display: flex;
+  flex-direction: column;
+}
