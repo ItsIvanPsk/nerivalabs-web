@@ -1,0 +1,64 @@
+<!-- Navbar -->
+<app-navbar/>
+
+<!-- Hero -->
+<app-hero/>
+
+<!-- Main -->
+<main class="main-container">
+  <div>
+    <h2>Contacto</h2>
+    <p><i>Rellena este formulario para ponerte en contacto con nosotros, los datos que introduzcas serán enviados directamente al equipo de Neriva Labs.</i></p>
+  </div>
+  
+  <!-- Formulario de contacto -->
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <label for="name">Nombre:</label>
+    <input id="name" type="text" formControlName="name" />
+    <div *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
+      El nombre es requerido.
+    </div>
+
+    <label for="email">Correo electrónico:</label>
+    <input id="email" type="email" formControlName="email" />
+    <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
+      Introduce un correo electrónico válido.
+    </div>
+
+    <label for="phone">Teléfono:</label>
+    <input id="phone" type="phone" formControlName="phone" />
+    <div *ngIf="contactForm.get('phone')?.invalid && contactForm.get('phone')?.touched">
+      Introduce un teléfono válido.
+    </div>
+
+    <label for="message">Mensaje:</label>
+    <textarea id="message" formControlName="message" rows="5"></textarea>
+    <div *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched">
+      El mensaje debe tener al menos 10 caracteres.
+    </div>
+
+    <button type="submit" [disabled]="contactForm.invalid">Enviar</button>
+  </form>
+
+  <!-- Modal para éxito -->
+  <div id="successModal" class="modal" tabindex="-1" *ngIf="showSuccessModal">
+    <div class="modal-content">
+      <h4>¡Correo enviado!</h4>
+      <p>Tu mensaje ha sido enviado con éxito. Te responderemos lo antes posible.</p>
+      <button (click)="closeSuccessModal()">Cerrar</button>
+    </div>
+  </div>
+
+  <!-- Modal para advertencia de 24 horas -->
+  <div id="warningModal" class="modal" tabindex="-1" *ngIf="showWarningModal">
+    <div class="modal-content">
+      <h4>No se puede enviar otro formulario</h4>
+      <p>Ya has enviado un formulario en las últimas 24 horas. Te responderemos lo antes posible.</p>
+      <button (click)="closeWarningModal()">Cerrar</button>
+    </div>
+  </div>
+
+</main>
+
+<!-- Footer -->
+<app-footer/>
