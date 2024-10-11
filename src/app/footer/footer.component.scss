@@ -11,29 +11,52 @@
     color: white;
     width: 97.5%;
     margin-left: -0.25%;
-  }
-  
-  .footer-logo img {
+}
+
+.footer-logo img {
     height: 7.5em;
-  }
-  
-  .footer-links {
+}
+
+.footer-links {
     list-style: none;
     text-align: right;
-  }
-  
-  .footer-links li {
+}
+
+.footer-links li {
     margin: 0.5rem;
-  }
-  
-  .footer-links a {
+}
+
+.footer-links a {
     color: white;
     text-decoration: none;
     font-size: 1.25em;
     font-family: 'Montserrat', sans-serif;
-  }
-  
-  .footer-links a:hover {
+}
+
+.footer-links a:hover {
     text-decoration: underline;
-  }
-  
+}
+
+/* Media query para móviles */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        width: 100%;
+    }
+
+    .footer-logo img {
+        height: 5em;
+        margin-bottom: 1rem;
+    }
+
+    .footer-links {
+        text-align: center;
+        padding: 0;
+    }
+
+    .footer-links a {
+        font-size: 1em;
+    }
+}

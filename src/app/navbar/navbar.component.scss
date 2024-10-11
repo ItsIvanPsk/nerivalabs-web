@@ -10,29 +10,54 @@
     background-color: $primary-color;
     color: white;
     width: 98%;
-    margin-left: -1%;
-  }
-  
-  .navbar-logo img {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbar-logo img {
     height: 50px;
     margin-left: 50%;
     margin-top: 15%;
-  }
-  
-  .navbar-links {
+}
+
+.navbar-links {
     list-style: none;
     display: flex;
     gap: 1rem;
-  }
-  
-  .navbar-links a {
+}
+
+p, a {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbar-links a {
     color: white;
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
-  }
-  
-  .navbar-links a:hover {
+}
+
+.navbar-links a:hover {
     text-decoration: underline;
     font-family: 'Montserrat', sans-serif;
-  }
-  
+}
+
+/* Media query para móviles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        width: 100%;
+    }
+
+    .navbar-logo img {
+        height: 40px;
+        margin: 0;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 1rem;
+        padding: 0;
+    }
+}

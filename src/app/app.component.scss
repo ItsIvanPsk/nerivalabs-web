@@ -77,3 +77,23 @@ a, p, h1, h2, h3, h4, em, b, i {
     width: 100%; // Asegura que los botones ocupen todo el ancho en pantallas pequeñas
   }
 }
+
+
+/* Estilos generales para móviles */
+@media (max-width: 768px) {
+  body {
+      font-size: 14px;
+      padding: 0;
+      margin: 0;
+  }
+
+  h1, h2, h3 {
+      font-size: 1.5em;
+      text-align: center;
+  }
+
+  .container {
+      padding: 1rem;
+      width: 100%;
+  }
+}
